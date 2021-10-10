@@ -525,6 +525,7 @@ a.white,
 }
 
 .navbar-custom .nav-item .nav-link {
+	font-family: 'Rubik';
 	padding: 0.625rem 0.75rem 0.625rem 0.75rem;
 	color: #fff;
 	text-decoration: none;

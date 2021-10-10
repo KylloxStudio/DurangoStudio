@@ -9,7 +9,7 @@
     "use strict"; 
 	
 	/* Preloader */
-	$(window).on('load', function() {
+	$(window).ready(function() {
 		var preloaderFadeOutTime = 500;
 		function hidePreloader() {
 			var preloader = $('.spinner-wrapper');
