@@ -30,10 +30,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>
         $(function() {
-            $.ajax({
-                url: 'https://github.com/KylloxStudio/Durango_V2/releases/tag/v1.0',
+            $.ajax('https://github.com/KylloxStudio/Durango_V2/releases/tag/v1.0', {
                 headers: {
-                    'Access-Control-Allow-Headers': 'https://github.com',
+                    'Access-Control-Allow-Headers': 'https://kyllox-durango.netlify.app/check-update',
                     'Access-Control-Allow-Methods': 'GET',
                     'Access-Control-Allow-Origin': '*'
                 },
@@ -44,6 +43,9 @@
                     404: function() {
                         alert('page not found');
                     }
+                },
+                success: function () {
+                    alert('1');
                 }
             });   
         });
