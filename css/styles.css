@@ -784,12 +784,13 @@ a.back-to-top {
 	right: 0.75rem;
 	bottom: 0.75rem;
 	display: none;
-	width: 2.625rem;
-	height: 2.625rem;
-	border-radius: 1.875rem;
-	background: #65dff5 url("../images/up-arrow.png") no-repeat center 47%;
-	background-size: 1.125rem 1.125rem;
+	width: 2.65rem;
+	height: 2.65rem;
+	border-radius: 50%;
+	background: #298eff url("../images/up-arrow.png") no-repeat center 47%;
+    background-size: 1.15rem 1.15rem;
 	text-indent: -9999px;
+    transition: all 0.15s ease-in-out;
 }
 
 a:hover.back-to-top {
@@ -1001,4 +1002,53 @@ a:hover.back-to-top {
 		padding-right: 12rem;
 		padding-left: 12rem;
 	}
+}
+
+.no-js {
+    display: flex;
+    position: fixed;
+    top: 0;
+    background: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2001;
+}
+
+.no-js-text {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+
+.no-js h1 {
+    font-family: 'NanumSquare';
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #151515;
+    line-height: 1.51;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.no-js p {
+    font-family: 'NanumSquare';
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.no-js a {
+    color: #4099ff;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.no-js a:hover {
+    text-decoration: underline;
 }
