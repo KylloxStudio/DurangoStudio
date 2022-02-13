@@ -787,7 +787,7 @@ a.back-to-top {
 	width: 2.65rem;
 	height: 2.65rem;
 	border-radius: 50%;
-	background: #298eff url("../images/up-arrow.png") no-repeat center 47%;
+	background: #65dff5 url("../images/up-arrow.png") no-repeat center 47%;
     background-size: 1.15rem 1.15rem;
 	text-indent: -9999px;
     transition: all 0.15s ease-in-out;
