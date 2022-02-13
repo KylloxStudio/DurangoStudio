@@ -5,7 +5,7 @@
         hideAllResult();
 
         $('html').addClass('hidden-scroll');
-        $('html').on('scroll touchmove mousewheel', function(event) {
+        $('#preloader').on('scroll touchmove mousewheel', function(event) {
             event.preventDefault();
             event.stopPropagation();
         });
@@ -17,7 +17,7 @@
                 $('.spinner-wrapper').fadeOut('slow');
             }, 100);
             $('html').removeClass('hidden-scroll')
-            $('html').off('scroll touchmove mousewheel');
+            $('#preloader').off('scroll touchmove mousewheel');
         });
     
         
