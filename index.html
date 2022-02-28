@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="hidden-scroll">
-
+<html>
 <head>
     <title>Kyllox's Durango Studio</title>
 
@@ -10,8 +9,6 @@
     <meta name="title" content="Kyllox's Durango Studio">
     <meta name="subject" content="Kyllox의 듀랑고 실험실">
     <meta name="description" content="Kyllox의 듀랑고 실험실입니다. 개발 소식을 전합니다.">
-
-    <meta name="robots" content="index, follow">
 
     <meta property="og:site_name" content="Kyllox's Durango Studio" />
     <meta property="og:site" content="https://durango.kyllox.studio" />
@@ -23,381 +20,46 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
 
+    <meta name="robots" content="index, follow">
+    <meta name="naver-site-verification" content="ad63ca1166169a6e1789d0632b37637d7890eea3" />
+
     <link rel="canonical" href="https://durango.kyllox.studio">
     <link rel="icon" href="images/favicon.png" />
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="styles/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/magnific-popup.css">
+    <script data-ad-client="ca-pub-6698934439909858" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script>
+        var lang;
+        var domain;
+
+        if (navigator.language != null) {
+            lang = navigator.language;
+            lang = lang.toLowerCase().substring(0, 2);
+        } else {
+            lang = "undefined";
+        }
+
+        if (lang == "ko") {
+            var agent = navigator.userAgent.toLowerCase();
+            if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
+                alert("이 웹사이트는 인터넷 익스플로러(IE)를 지원하지 않습니다.");
+                window.close();
+            }
+            location.replace("ko/");
+        } else if (lang == "en") {
+            if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
+                alert("This website does not support Internet Explorer.");
+                window.close();
+            }
+            location.replace("en/");
+        } else {
+            if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
+                alert("This website does not support Internet Explorer.");
+                window.close();
+            }
+            location.replace("en/");
+        }
+    </script>
 </head>
-
-<body id="top">
-    <div id="preloader"> 
-    	<div id="loader"></div>
-    </div>
-
-    <header id="header" class="fixed-top">
-        <div class="hoc clear">
-            <h1 class="logo"><a onclick="reloadPage();">Kyllox</a></h1>
-
-            <nav id="mainnav">
-                <div class="ham">
-                    <span class="bar1"></span>
-                    <span class="bar2"></span>
-                    <span class="bar3"></span>
-                </div>
-        
-                <ul class="nav-items clear">
-                    <li><a class="nav-link page-scroll" href="#top">Intro</a></li>
-                    <li><a class="nav-link page-scroll" href="#testing">Testing</a></li>
-                    <li><a class="nav-link page-scroll" href="#results">Results</a></li>
-                    <li><a class="nav-link page-scroll" href="#contact">Contact</a></li>
-                    <li><a class="nav-link drop">Pages</a>
-                        <ul class="drop-menu">
-                            <li><a href="https://blog.kyllox.studio">BLOG</a></li>
-                            <li><a href="https://durango.kyllox.studio">Durango Studio</a></li>
-                            <li><a href="https://what.kyllox.studio">What! Studio</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        
-            <nav id="slide-menu" class="slide-menu-container">
-                <ul class="slide-menu">
-                    <li class="slide-item">
-                        <div class="slide-go-arrow">
-                            <a class="fa fa-angle-right page-scroll" href="#top"></a>
-                        </div>
-                        <a class="slide-link page-scroll" href="#top">Intro</a>
-                    </li>
-                    <li class="slide-item">
-                        <div class="slide-go-arrow">
-                            <a class="fa fa-angle-right page-scroll" href="#about"></a>
-                        </div>
-                        <a class="slide-link page-scroll" href="#about">About</a>
-                    </li>
-                    <li class="slide-item">
-                        <div class="slide-go-arrow">
-                            <a class="fa fa-angle-right page-scroll" href="#projects"></a>
-                        </div>
-                        <a class="slide-link page-scroll" href="#projects">Projects</a>
-                    </li>
-                    <li class="slide-item">
-                        <div class="slide-go-arrow">
-                            <a class="fa fa-angle-right page-scroll" href="#contact"></a>
-                        </div>
-                        <a class="slide-link page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li class="slide-item">
-                        <div class="slide-drop-arrow">
-                            <a id="pages-down" class="fa fa-angle-down"></a>
-                            <a id="pages-up" class="fa fa-angle-up" style="display: none;"></a>
-                        </div>
-                        <div class="slide-pages-wrapper">
-                            <a id="slide-pages-btn" class="slide-link">Pages</a>
-                        </div>
-                        <ul id="slide-menu-pages" class="slide-menu-sub">
-                            <li class="slide-item-sub"><a class="slide-link-sub" href="https://blog.kyllox.studio">└ BLOG</a></li>
-                            <li class="slide-item-sub"><a class="slide-link-sub" href="https://durango.kyllox.studio">└ Durango Studio</a></li>
-                            <li class="slide-item-sub"><a class="slide-link-sub" href="https://what.kyllox.studio">└ What! Studio</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="intro" class="wrapper">
-        <div class="intro-overlay"></div>
-
-        <div class="intro-content">
-            <div class="row">
-                <h1>Kyllox의 듀랑고 실험실</h1>
-                
-                <p class="intro-position">
-                    <span>듀랑고 관련 개발 소식을 전합니다.</span>
-                </p>
-                
-                <a class="button stroke page-scroll" href="#testing">More About</a>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="testing" class="basic-1">
-        <div class="container">
-            <div class="grid">
-                <div class="col-lg-5">
-                    <div class="text-container">
-                        <div class="section-title">TESTING</div>
-                        <h2>항해 시스템 실험</h2>
-                        <p>항해 시스템 실험을 진행 중이며,</p>
-                        <p>현재 50% 정도 완성되었습니다.</p>
-                        <p>(완성 시 깃허브에 업로드됩니다)</p>
-                        <p>(<a rel="noopener noreferrer" target="_blank" href="https://github.com/KylloxStudio/Durango_V2">https://github.com/KylloxStudio/Durango_V2</a>)</p>
-                        <div class="testimonial-author">- Kyllox</div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/sail-test.jpg" alt="alternative">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="results">
-        <div id="result-01" class="basic-1" style="display: none;">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-lg-5">
-                        <div class="text-container">
-                            <div class="section-title">RESULT</div>
-                            <h2>휴식건물, 휴식모션</h2>
-                            <p>휴식 가능한 건물과 모션을 추가했으며,</p>
-                            <p>아래 유튜브 영상에서 기능을</p>
-                            <p>확인하실 수 있습니다.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/AHItMPTbH7w"><b>유튜브 영상 바로가기</b></a></li>
-                            <p></p>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="image-container">
-                            <img class="img-fluid" src="images/result-picture-01.png" alt="alternative">
-                        </div>
-                    </div>
-                </div>
-                <div class="result-btn-container">
-                    <a onclick="showResult02();" class="next arrowbtn">›</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="result-02" class="basic-1" style="display: none;">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-lg-5">
-                        <div class="text-container">
-                            <div class="section-title">RESULT</div>
-                            <h2>날씨 커스텀마이징</h2>
-                            <p>날씨를 조정할 수 있는 기능을 추가했으며,</p>
-                            <p>아래 유튜브 영상에서 기능을</p>
-                            <p>확인하실 수 있습니다.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/HUzp1J6EBvI"><b>유튜브 영상 바로가기</b></a></li>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="image-container">
-                            <img class="img-fluid" src="images/result-picture-02.png" alt="alternative">
-                        </div>
-                    </div>
-                </div>
-                <div class="result-btn-container">
-                    <a onclick="showResult01();" class="previous arrowbtn">‹</a>
-                    <a onclick="showResult03();" class="next arrowbtn">›</a>
-                </div>
-            </div>
-        </div>
-        
-        <div id="result-03" class="basic-1" style="display: none;">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-lg-5">
-                        <div class="text-container">
-                            <div class="section-title">RESULT</div>
-                            <h2>전투버튼, 전투액션</h2>
-                            <p>전투버튼과 전투액션을 추가했으며,</p>
-                            <p>아래 유튜브 영상에서 기능을</p>
-                            <p>확인하실 수 있습니다.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/3iIHsjGJ0cQ"><b>유튜브 영상 바로가기</b></a></li>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="image-container">
-                            <img class="img-fluid" src="images/result-picture-03.png" alt="alternative">
-                        </div>
-                    </div>
-                </div>
-                <div class="result-btn-container">
-                    <a onclick="showResult02();" class="previous arrowbtn">‹</a>
-                    <a onclick="showResult04();" class="next arrowbtn">›</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="result-04" class="basic-1" style="display: none;">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-lg-5">
-                        <div class="text-container">
-                            <div class="section-title">RESULT</div>
-                            <h2>건물 상호작용</h2>
-                            <p>여러 건물의 상호작용을 추가했으며</p>
-                            <p>아래 유튜브 영상에서 기능을</p>
-                            <p>확인하실 수 있습니다.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/w5UM0QsU1vQ"><b>유튜브 영상 바로가기</b></a></li>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="image-container">
-                            <img class="img-fluid" src="images/result-picture-04.png" alt="alternative">
-                        </div>
-                    </div>
-                </div>
-                <div class="result-btn-container">
-                    <a onclick="showResult03();" class="previous arrowbtn">‹</a>
-                    <a onclick="showResult05();" class="next arrowbtn">›</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="result-05" class="basic-1" style="display: none;">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-lg-5">
-                        <div class="text-container">
-                            <div class="section-title">RESULT</div>
-                            <h2>동물 길들이기, 펫 기능</h2>
-                            <p>동물 길들이기와 펫 기능을 구현했으며,</p>
-                            <p>아래 유튜브 영상에서 기능을</p>
-                            <p>확인하실 수 있습니다.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/w5UM0QsU1vQ"><b>유튜브 영상 바로가기</b></a></li>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="image-container">
-                            <img class="img-fluid" src="images/result-picture-05.png" alt="alternative">
-                        </div>
-                    </div>
-                </div>
-                <div class="result-btn-container">
-                    <a onclick="showResult04();" class="previous arrowbtn">‹</a>
-                    <a onclick="showResult06();" class="next arrowbtn">›</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="result-06" class="basic-1">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-lg-5">
-                        <div class="text-container">
-                            <div class="section-title">RESULT</div>
-                            <h2>전투 시스템, 펀치머신</h2>
-                            <p>전투와 펀치머신 기능을 구현했으며,</p>
-                            <p>아래 유튜브 영상에서 기능을</p>
-                            <p>확인하실 수 있습니다.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/AmcfeOfof9I"><b>유튜브 영상 바로가기</b></a></li>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="image-container">
-                            <img class="img-fluid" src="images/result-picture-06.png" alt="alternative">
-                        </div>
-                    </div>
-                </div>
-                <div class="result-btn-container">
-                    <a onclick="showResult05();" class="previous arrowbtn">‹</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="contact">
-        <div class="container">
-            <div class="grid">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <div class="section-title">CONTACT</div>
-                        <h2>문의 사항</h2>
-                        <p>아래 이메일로 문의하실 수 있습니다.</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li><a href="mailto:kyllox4804@gmail.com"><i class="fas fa-envelope"></i>Kyllox4804@gmail.com</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <form method="POST" id="contact-form" name="contact-form" class="contact-form">
-                        <div class="form-field">
-                            <input type="text" name="title" class="form-control" placeholder="Title" required>
-                        </div>
-                        <div class="form-field">
-                            <input type="text" name="name" class="form-control" placeholder="Name" required>
-                        </div>
-                        <div class="form-field">
-                            <input type="text" name="email" class="form-control" placeholder="Email" required>
-                        </div>
-                        <div class="form-field">
-                            <textarea name="message" class="form-control" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="form-field">
-                            <div class="g-recaptcha" data-sitekey="6LePCCMcAAAAAE0F2XW3lp0H0LuFjRlE-UXlZkcu"></div>
-                            <div id="error-label"></div>
-                        </div>
-                        <div class="form-field">
-                            <input type="submit" name="submit" class="submit" value="Submit"/>
-                        </div>
-                        <div id="submit-loader">
-                            <div class="text-loader">Sending...</div>
-                            <div class="s-loader">
-                                <div class="bounce1"></div>
-                                <div class="bounce2"></div>
-                                <div class="bounce3"></div>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="message-success"></div>
-                    <div id="message-warning"></div>
-                </div>
-            </div>
-            <script src="https://utteranc.es/client.js" repo="KylloxStudio/DurangoStudio" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
-        </div>
-    </section>
-
-
-    <footer id="copyright">
-        <div class="row">
-            <div class="col-six tab-full">
-                <p class="fl_left text">Kyllox &copy; 2021. All Rights Reserved.</p>
-            </div>
-            <div class="col-six tab-full pull-right social">
-                <ul class="footer-social">
-                    <li><a rel="noopener noreferrer" target="_blank" href="https://github.com/KylloxStudio"><i class="fab fa-github"></i></a></li>
-                    <li><a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/channel/UCd2bfrmZWJ52sQjFDGZKeXQ"><i class="fab fa-youtube"></i></a></li>
-                    <li><a rel="noopener noreferrer" target="_blank" href="https://twitter.com/KylloxStudio"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/jquery.easing.min.js"></script>
-    <script src="scripts/jquery.validate.min.js"></script>
-    <script src="scripts/main.js"></script>
-
-    <noscript>
-        <div class="no-js">
-            <div class="no-js-text">
-                <h1>JavaScript 권한이 필요합니다.</h1>
-                <p>JavaScript 권한은 <a rel="noopener noreferrer" target="_black" href="https://enable-javascript.com">브라우저 설정</a>에서 허용 가능합니다.</p>
-            </div>
-        </div>
-    </noscript>
-</body>
-
 </html>

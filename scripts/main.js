@@ -165,6 +165,10 @@
             }
         });
 
+        setTimeout(function() {
+            $('#intro h1').fitText(2, { minFontSize: '21px', maxFontSize: '58px' });
+        }, 100);
+
         $(".ham").click(function(){
             $(this).toggleClass("active");
             $('.slide-menu-container').slideToggle();
@@ -184,33 +188,28 @@
             $('.slide-menu-container').slideUp('fast');
         });
 
-        $('#pages-down').click(function() {
-            $('#pages-down').hide();
-            $('#pages-up').show();
-            $('#slide-menu-pages').slideDown('fast');
-            $('#slide-pages-btn').toggleClass("active");
-            $('#pages-up').toggleClass("active");
+        $('#lang-down').click(function() {
+            $('#lang-down').hide();
+            $('#lang-up').show();
+            $('#slide-menu-lang').slideDown('fast');
+            $('#slide-lang-btn').toggleClass("active");
+            $('#lang-up').toggleClass("active");
         });
 
-        $('#pages-up').click(function() {
-            $('#pages-down').show();
-            $('#pages-up').hide();
-            $('#slide-menu-pages').slideUp('fast');
-            $('#slide-pages-btn').toggleClass("active");
-            $('#pages-up').toggleClass("active");
+        $('#lang-up').click(function() {
+            $('#lang-down').show();
+            $('#lang-up').hide();
+            $('#slide-menu-lang').slideUp('fast');
+            $('#slide-lang-btn').toggleClass("active");
+            $('#lang-up').toggleClass("active");
         });
 
-        $('#slide-pages-btn').click(function() {
-            $('#pages-down').toggle();
-            $('#pages-up').toggle();
-            $('#slide-menu-pages').slideToggle('fast');
-            $('#slide-pages-btn').toggleClass("active");
-            $('#pages-up').toggleClass("active");
-        });
-
-        $('#donate').click(function() {
-            var win = window.open('https://toss.me/kyllox/5000', '_blank noopener noreferrer');
-            win.focus();
+        $('#slide-lang-btn').click(function() {
+            $('#lang-down').toggle();
+            $('#lang-up').toggle();
+            $('#slide-menu-lang').slideToggle('fast');
+            $('#slide-lang-btn').toggleClass("active");
+            $('#lang-up').toggleClass("active");
         });
 	});
 })(jQuery);

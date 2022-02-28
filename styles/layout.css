@@ -435,7 +435,7 @@ a {
 }
 
 .intro-content .intro-position {
-	font-family: "InfinitySans Regular";
+	font-family: "Poppins Medium", "InfinitySans Regular";
 	font-size: 1.65rem;
 	line-height: 2.75rem;
 	text-transform: uppercase;
@@ -446,6 +446,16 @@ a {
 
 .intro-content .intro-position span {
     font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .intro-content h1 {
+        font-size: 2.75rem;
+    }
+    
+    .intro-content .intro-position span {
+        font-size: 0.9rem;
+    }
 }
 
 .intro-content .intro-position span::after {
@@ -543,7 +553,7 @@ button.stroke, .button.stroke {
 	line-height: 4.8rem;
 }
 
-@media (max-width: 578px) {
+@media (max-width: 568px) {
     .intro-content .intro-position span {
         font-size: 0.75rem;
     }
