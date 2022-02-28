@@ -1,105 +1,141 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="hidden-scroll">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <meta name="description" content="Kyllox">
-    <meta name="author" content="Inovatik">
-
-	<meta property="og:site_name" content="" />
-	<meta property="og:site" content="" />
-	<meta property="og:title" content=""/>
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:type" content="article" />
-
     <title>Kyllox's Durango Studio</title>
-    
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	
-    <link rel="icon" href="images/favicon.png">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Kyllox">
+    <meta name="title" content="Kyllox's Durango Studio">
+    <meta name="subject" content="Kyllox의 듀랑고 실험실">
+    <meta name="description" content="Kyllox의 듀랑고 실험실입니다. 개발 소식을 전합니다.">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:site_name" content="Kyllox's Durango Studio" />
+    <meta property="og:site" content="https://durango.kyllox.studio" />
+    <meta property="og:title" content="Kyllox의 듀랑고 실험실" />
+    <meta property="og:description" content="Kyllox의 듀랑고 실험실입니다. 개발 소식을 전합니다." />
+    <meta property="og:image" content="https://durango.kyllox.studio/images/favicon.png">
+    <meta property="og:image:alt" content="Main-Image">
+    <meta property="og:url" content="https://durango.kyllox.studio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <link rel="canonical" href="https://durango.kyllox.studio">
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/magnific-popup.css">
 </head>
-<body data-spy="scroll" data-target=".fixed-top">
-    
-	<div id="preloader" class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
+
+<body id="top">
+    <div id="preloader"> 
+    	<div id="loader"></div>
     </div>
-    
 
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+    <header id="header" class="fixed-top">
+        <div class="hoc clear">
+            <h1 class="logo"><a onclick="reloadPage();">Kyllox</a></h1>
 
-        <a class="navbar-brand logo-image" onclick="refresh();" href="#"><img src="images/kyllox-logo.png" alt="alternative"></a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-
-        <div id="navbar-items" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#testing">TESTING</a>
-                </li>
-                <li class="nav-item">
-                    <a onclick="hideAllResult();" class="nav-link page-scroll" href="#result">RESULT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <header id="header" class="header">
-        <div class="header-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-container">
-                            <h1>Kyllox의 듀랑고 실험실</h1>
-                            <p class="p-heading p-large">듀랑고 관련 코딩 / 소식글을 업로드합니다.</p>
-                        </div>
-                    </div>
+            <nav id="mainnav">
+                <div class="ham">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                    <span class="bar3"></span>
                 </div>
-            </div>
+        
+                <ul class="nav-items clear">
+                    <li><a class="nav-link page-scroll" href="#top">Intro</a></li>
+                    <li><a class="nav-link page-scroll" href="#testing">Testing</a></li>
+                    <li><a class="nav-link page-scroll" href="#results">Results</a></li>
+                    <li><a class="nav-link page-scroll" href="#contact">Contact</a></li>
+                    <li><a class="nav-link drop">Pages</a>
+                        <ul class="drop-menu">
+                            <li><a href="https://blog.kyllox.studio">BLOG</a></li>
+                            <li><a href="https://durango.kyllox.studio">Durango Studio</a></li>
+                            <li><a href="https://what.kyllox.studio">What! Studio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        
+            <nav id="slide-menu" class="slide-menu-container">
+                <ul class="slide-menu">
+                    <li class="slide-item">
+                        <div class="slide-go-arrow">
+                            <a class="fa fa-angle-right page-scroll" href="#top"></a>
+                        </div>
+                        <a class="slide-link page-scroll" href="#top">Intro</a>
+                    </li>
+                    <li class="slide-item">
+                        <div class="slide-go-arrow">
+                            <a class="fa fa-angle-right page-scroll" href="#about"></a>
+                        </div>
+                        <a class="slide-link page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="slide-item">
+                        <div class="slide-go-arrow">
+                            <a class="fa fa-angle-right page-scroll" href="#projects"></a>
+                        </div>
+                        <a class="slide-link page-scroll" href="#projects">Projects</a>
+                    </li>
+                    <li class="slide-item">
+                        <div class="slide-go-arrow">
+                            <a class="fa fa-angle-right page-scroll" href="#contact"></a>
+                        </div>
+                        <a class="slide-link page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li class="slide-item">
+                        <div class="slide-drop-arrow">
+                            <a id="pages-down" class="fa fa-angle-down"></a>
+                            <a id="pages-up" class="fa fa-angle-up" style="display: none;"></a>
+                        </div>
+                        <div class="slide-pages-wrapper">
+                            <a id="slide-pages-btn" class="slide-link">Pages</a>
+                        </div>
+                        <ul id="slide-menu-pages" class="slide-menu-sub">
+                            <li class="slide-item-sub"><a class="slide-link-sub" href="https://blog.kyllox.studio">└ BLOG</a></li>
+                            <li class="slide-item-sub"><a class="slide-link-sub" href="https://durango.kyllox.studio">└ Durango Studio</a></li>
+                            <li class="slide-item-sub"><a class="slide-link-sub" href="https://what.kyllox.studio">└ What! Studio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
+    <section id="intro" class="wrapper">
+        <div class="intro-overlay"></div>
 
-    <div id="testing" class="basic-1">
-        <div class="container">
+        <div class="intro-content">
             <div class="row">
+                <h1>Kyllox의 듀랑고 실험실</h1>
+                
+                <p class="intro-position">
+                    <span>듀랑고 관련 개발 소식을 전합니다.</span>
+                </p>
+                
+                <a class="button stroke page-scroll" href="#testing">More About</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="testing" class="basic-1">
+        <div class="container">
+            <div class="grid">
                 <div class="col-lg-5">
                     <div class="text-container">
                         <div class="section-title">TESTING</div>
                         <h2>항해 시스템 실험</h2>
                         <p>항해 시스템 실험을 진행 중이며,</p>
-                        <p>현재 5% 정도 완성되었습니다.</p>
+                        <p>현재 50% 정도 완성되었습니다.</p>
                         <p>(완성 시 깃허브에 업로드됩니다)</p>
-                        <div class="testimonial-author">- Kyllox</div>
-                    </div>
-                    <div class="text-container">
-                        <div class="section-title"></div>
-                        <h2>Sailing Systems Experiment</h2>
-                        <p>I'm experimenting a sailing system,</p>
-                        <p>It is now about 5% complete.</p>
-                        <p>(will be uploaded to GitHub when it's done)</p>
+                        <p>(<a rel="noopener noreferrer" target="_blank" href="https://github.com/KylloxStudio/Durango_V2">https://github.com/KylloxStudio/Durango_V2</a>)</p>
                         <div class="testimonial-author">- Kyllox</div>
                     </div>
                 </div>
@@ -110,12 +146,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="result">
-        <div id="result-01" class="basic-1">
+
+    <section id="results">
+        <div id="result-01" class="basic-1" style="display: none;">
             <div class="container">
-                <div class="row">
+                <div class="grid">
                     <div class="col-lg-5">
                         <div class="text-container">
                             <div class="section-title">RESULT</div>
@@ -127,15 +164,6 @@
                             <p></p>
                             <div class="testimonial-author">- Kyllox</div>
                         </div>
-                        <div class="text-container">
-                            <div class="section-title"></div>
-                            <h2>Resting Building, Resting Motion</h2>
-                            <p>I've added rest possible buildings and motions,</p>
-                            <p>You can check the function in the YouTube video below.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/AHItMPTbH7w"><b>Go Youtube Video</b></a></li>
-                            <p></p>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="image-container">
@@ -143,17 +171,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="result-btn-container">
-                <div class="next-container">
-                    <a onclick="showResult02();" class="next round arrowbtn page-scroll" href="#result">&#8250;</a>
+                <div class="result-btn-container">
+                    <a onclick="showResult02();" class="next arrowbtn">›</a>
                 </div>
             </div>
         </div>
 
-        <div id="result-02" class="basic-1">
+        <div id="result-02" class="basic-1" style="display: none;">
             <div class="container">
-                <div class="row">
+                <div class="grid">
                     <div class="col-lg-5">
                         <div class="text-container">
                             <div class="section-title">RESULT</div>
@@ -162,16 +188,6 @@
                             <p>아래 유튜브 영상에서 기능을</p>
                             <p>확인하실 수 있습니다.</p>
                             <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/HUzp1J6EBvI"><b>유튜브 영상 바로가기</b></a></li>
-                            <p></p>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                        <div class="text-container">
-                            <div class="section-title"></div>
-                            <h2>Weather Customizing</h2>
-                            <p>I've added the ability to control the weather,</p>
-                            <p>You can check the function in the YouTube video below.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/HUzp1J6EBvI"><b>Go Youtube Video</b></a></li>
-                            <p></p>
                             <div class="testimonial-author">- Kyllox</div>
                         </div>
                     </div>
@@ -181,20 +197,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="result-btn-container">
-                <div class="previous-container">
-                    <a onclick="showResult01();" class="previous round arrowbtn page-scroll" href="#result">&#8249;</a>
-                </div>
-                <div class="next-container">
-                    <a onclick="showResult03();" class="next round arrowbtn page-scroll" href="#result">&#8250;</a>
+                <div class="result-btn-container">
+                    <a onclick="showResult01();" class="previous arrowbtn">‹</a>
+                    <a onclick="showResult03();" class="next arrowbtn">›</a>
                 </div>
             </div>
         </div>
         
-        <div id="result-03" class="basic-1">
+        <div id="result-03" class="basic-1" style="display: none;">
             <div class="container">
-                <div class="row">
+                <div class="grid">
                     <div class="col-lg-5">
                         <div class="text-container">
                             <div class="section-title">RESULT</div>
@@ -203,16 +215,6 @@
                             <p>아래 유튜브 영상에서 기능을</p>
                             <p>확인하실 수 있습니다.</p>
                             <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/3iIHsjGJ0cQ"><b>유튜브 영상 바로가기</b></a></li>
-                            <p></p>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                        <div class="text-container">
-                            <div class="section-title"></div>
-                            <h2>Battle Button, Battle Action</h2>
-                            <p>I've added Battle buttons and Battle actions,</p>
-                            <p>You can check the function in the YouTube video below.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/3iIHsjGJ0cQ"><b>Go Youtube Video</b></a></li>
-                            <p></p>
                             <div class="testimonial-author">- Kyllox</div>
                         </div>
                     </div>
@@ -222,20 +224,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="result-btn-container">
-                <div class="previous-container">
-                    <a onclick="showResult02();" class="previous round arrowbtn page-scroll" href="#result">&#8249;</a>
-                </div>
-                <div class="next-container">
-                    <a onclick="showResult04();" class="next round arrowbtn page-scroll" href="#result">&#8250;</a>
+                <div class="result-btn-container">
+                    <a onclick="showResult02();" class="previous arrowbtn">‹</a>
+                    <a onclick="showResult04();" class="next arrowbtn">›</a>
                 </div>
             </div>
         </div>
 
-        <div id="result-04" class="basic-1">
+        <div id="result-04" class="basic-1" style="display: none;">
             <div class="container">
-                <div class="row">
+                <div class="grid">
                     <div class="col-lg-5">
                         <div class="text-container">
                             <div class="section-title">RESULT</div>
@@ -244,16 +242,6 @@
                             <p>아래 유튜브 영상에서 기능을</p>
                             <p>확인하실 수 있습니다.</p>
                             <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/w5UM0QsU1vQ"><b>유튜브 영상 바로가기</b></a></li>
-                            <p></p>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                        <div class="text-container">
-                            <div class="section-title"></div>
-                            <h2>Building Interaction</h2>
-                            <p>I've added Building Interactions,</p>
-                            <p>You can check the function in the YouTube video below.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/w5UM0QsU1vQ"><b>Go Youtube Video</b></a></li>
-                            <p></p>
                             <div class="testimonial-author">- Kyllox</div>
                         </div>
                     </div>
@@ -263,20 +251,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="result-btn-container">
-                <div class="previous-container">
-                    <a onclick="showResult03();" class="previous round arrowbtn page-scroll" href="#result">&#8249;</a>
-                </div>
-                <div class="next-container">
-                    <a onclick="showResult05();" class="next round arrowbtn page-scroll" href="#result">&#8250;</a>
+                <div class="result-btn-container">
+                    <a onclick="showResult03();" class="previous arrowbtn">‹</a>
+                    <a onclick="showResult05();" class="next arrowbtn">›</a>
                 </div>
             </div>
         </div>
 
-        <div id="result-05" class="basic-1">
+        <div id="result-05" class="basic-1" style="display: none;">
             <div class="container">
-                <div class="row">
+                <div class="grid">
                     <div class="col-lg-5">
                         <div class="text-container">
                             <div class="section-title">RESULT</div>
@@ -285,16 +269,6 @@
                             <p>아래 유튜브 영상에서 기능을</p>
                             <p>확인하실 수 있습니다.</p>
                             <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/w5UM0QsU1vQ"><b>유튜브 영상 바로가기</b></a></li>
-                            <p></p>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                        <div class="text-container">
-                            <div class="section-title"></div>
-                            <h2>Taming animals, Pet functions</h2>
-                            <p>I've implemented animal taming and pet functions,</p>
-                            <p>You can check the function in the YouTube video below.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/w5UM0QsU1vQ"><b>Go Youtube Video</b></a></li>
-                            <p></p>
                             <div class="testimonial-author">- Kyllox</div>
                         </div>
                     </div>
@@ -304,13 +278,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="result-btn-container">
-                <div class="previous-container">
-                    <a onclick="showResult04();" class="previous round arrowbtn page-scroll" href="#result">&#8249;</a>
-                </div>
-                <div class="next-container">
-                    <a onclick="showResult06();" class="next round arrowbtn page-scroll" href="#result">&#8250;</a>
+                <div class="result-btn-container">
+                    <a onclick="showResult04();" class="previous arrowbtn">‹</a>
+                    <a onclick="showResult06();" class="next arrowbtn">›</a>
                 </div>
             </div>
         </div>
@@ -318,7 +288,7 @@
 
         <div id="result-06" class="basic-1">
             <div class="container">
-                <div class="row">
+                <div class="grid">
                     <div class="col-lg-5">
                         <div class="text-container">
                             <div class="section-title">RESULT</div>
@@ -327,16 +297,6 @@
                             <p>아래 유튜브 영상에서 기능을</p>
                             <p>확인하실 수 있습니다.</p>
                             <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/AmcfeOfof9I"><b>유튜브 영상 바로가기</b></a></li>
-                            <p></p>
-                            <div class="testimonial-author">- Kyllox</div>
-                        </div>
-                        <div class="text-container">
-                            <div class="section-title"></div>
-                            <h2>Combat System, Punch Machine</h2>
-                            <p>I implemented combat and punch machine functions,</p>
-                            <p>You can check the function in the YouTube video below.</p>
-                            <li><a class="linkbtn" rel="noopener noreferrer" target="_blank" href="https://youtu.be/AmcfeOfof9I"><b>Go Youtube Video</b></a></li>
-                            <p></p>
                             <div class="testimonial-author">- Kyllox</div>
                         </div>
                     </div>
@@ -346,118 +306,96 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="result-btn-container">
-                <div class="previous-container">
-                    <a onclick="showResult05();" class="previous round arrowbtn page-scroll" href="#result">&#8249;</a>
+                <div class="result-btn-container">
+                    <a onclick="showResult05();" class="previous arrowbtn">‹</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <div id="contact" class="contact-form">
+    <section id="contact">
         <div class="container">
-            <div class="row">
+            <div class="grid">
                 <div class="col-lg-6">
                     <div class="text-container">
                         <div class="section-title">CONTACT</div>
                         <h2>문의 사항</h2>
                         <p>아래 이메일로 문의하실 수 있습니다.</p>
                         <ul class="list-unstyled li-space-lg">
-                            <li id="send-email-link-ko"><i class="fas fa-envelope"></i><a class="linkbtn"><b>Kyllox4804@gmail.com</b></a></li>
+                            <li><a href="mailto:kyllox4804@gmail.com"><i class="fas fa-envelope"></i>Kyllox4804@gmail.com</a></li>
                         </ul>
-                        <h2>Inquiry</h2>
-                        <p>If you have any questions, please send it to the email below.</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li id="send-email-link-en"><i class="fas fa-envelope"></i><a class="linkbtn"><b>Kyllox4804@gmail.com</b></a></li>
-                        </ul>
-                        
-                        <h3>관련 사이트</h3>
-                        <h3>Related Sites</h3>
-
-                        <span class="fa-stack">
-                            <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/channel/UCd2bfrmZWJ52sQjFDGZKeXQ">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-youtube fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a rel="noopener noreferrer" target="_blank" href="https://gall.dcinside.com/mgallery/board/lists/?id=leeunseok"><img class="community-btn" src="images/dcinside-logo.png" alt="alternative"></a>
-                        </span>
-                        <span class="fa-stack">
-                            <a rel="noopener noreferrer" target="_blank" href="https://what.kyllox.studio"><img class="community-btn" src="images/whatstudio-logo.jpg" alt="alternative"></a>
-                        </span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="send-email-dialog-ko" class="dialog">
-        <div class="dialog-content">
-            <span id="dialog-close-ko" class="dialog-close">&times;</span>
-            <div class="dialog-header">
-                <h5 class="dialog-title">이메일 보내기</h5>
-            </div>
-            <div class="send-email-wrap">
-                <input type="text" name="name-ko" class="send-email-input form-control" placeholder="이름을 입력해주세요" onkeyup="checkWordByteKo(this, 20);">
-                <input type="text" name="email-ko" class="send-email-input form-control" placeholder="이메일 주소를 입력해주세요" onkeyup="checkWordByteKo(this, 35);">
-                <textarea name="message-ko" rows="5" class="send-email-textarea form-control" placeholder="내용을 입력해주세요" onkeyup="checkWordByteKo(this, 100);"></textarea>
-                <input type="button" name="submit-ko" class="send-email-btn" value="메일 보내기"/>
-            </div>
-        </div>
-    </div>
-
-    <div id="send-email-dialog-en" class="dialog">
-        <div class="dialog-content">
-            <span id="dialog-close-en" class="dialog-close">&times;</span>
-            <div class="dialog-header">
-                <h5 class="dialog-title">Send Email</h5>
-            </div>
-            <div class="send-email-wrap">
-                <input type="text" name="name-en" class="send-email-input form-control" placeholder="Please Write Your Name" onkeyup="checkWordByteEn(this, 20);">
-                <input type="text" name="email-en" class="send-email-input form-control" placeholder="Please Write Your Email Address" onkeyup="checkWordByteEn(this, 35);">
-                <textarea name="message-en" rows="5" class="send-email-textarea form-control" placeholder="Please Write Message" onkeyup="checkWordByteEn(this, 100);"></textarea>
-                <input type="button" name="submit-en" class="send-email-btn" value="Send Email"/>
-            </div>
-        </div>
-    </div>
-	
-	
-	<div id="copyright" class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small"><a rel="noopener noreferrer" target="_blank" href="https://kyllox.studio">© Kyllox 2021</a>. All Rights Reserved.</p>
+                <div class="col-lg-6">
+                    <form method="POST" id="contact-form" name="contact-form" class="contact-form">
+                        <div class="form-field">
+                            <input type="text" name="title" class="form-control" placeholder="Title" required>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" name="name" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-field">
+                            <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-field">
+                            <div class="g-recaptcha" data-sitekey="6LePCCMcAAAAAE0F2XW3lp0H0LuFjRlE-UXlZkcu"></div>
+                            <div id="error-label"></div>
+                        </div>
+                        <div class="form-field">
+                            <input type="submit" name="submit" class="submit" value="Submit"/>
+                        </div>
+                        <div id="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <footer id="copyright">
+        <div class="row">
+            <div class="col-six tab-full">
+                <p class="fl_left text">Kyllox &copy; 2021. All Rights Reserved.</p>
+            </div>
+            <div class="col-six tab-full pull-right social">
+                <ul class="footer-social">
+                    <li><a rel="noopener noreferrer" target="_blank" href="https://github.com/KylloxStudio"><i class="fab fa-github"></i></a></li>
+                    <li><a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/channel/UCd2bfrmZWJ52sQjFDGZKeXQ"><i class="fab fa-youtube"></i></a></li>
+                    <li><a rel="noopener noreferrer" target="_blank" href="https://twitter.com/KylloxStudio"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/morphext.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/validator.min.js"></script>
-    <script src="js/scripts.js"></script>
-	
-	<noscript>
-		<div class="no-js">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://utteranc.es/client.js" repo="KylloxStudio/DurangoStudio" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.easing.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <noscript>
+        <div class="no-js">
             <div class="no-js-text">
                 <h1>JavaScript 권한이 필요합니다.</h1>
                 <p>JavaScript 권한은 <a rel="noopener noreferrer" target="_black" href="https://enable-javascript.com">브라우저 설정</a>에서 허용 가능합니다.</p>
             </div>
         </div>
-	</noscript>
+    </noscript>
 </body>
+
 </html>
