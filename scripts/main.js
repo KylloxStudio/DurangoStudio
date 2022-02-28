@@ -16,42 +16,42 @@
         el.addEventListener('scroll', listener);
     };
 
-    const contactForm = function() {
+    const contactFormKo = function() {
         emailjs.init("user_ObDVdiMQlk2RAhavouTNx");
-        $('#contact-form').validate({
+        $('#contact-form-ko').validate({
             rules: {
-                "name": {
+                "name-ko": {
                     required: true,
                     maxlength: 35
                 },
-                "title": {
+                "title-ko": {
                     required: true,
                     maxlength: 35
                 },
-                "email": {
+                "email-ko": {
                     required: true,
                     email: true
                 },
-                "message": {
+                "message-ko": {
                     required: true,
                     minlength: 5,
                     maxlength: 500
                 }
             },
             messages: {
-                "name": {
+                "name-ko": {
                     required: "이름을 입력해주세요.",
                     maxlength: "이름은 최대 35글자까지 입력 가능합니다."
                 },
-                "title": {
+                "title-ko": {
                     required: "제목을 입력해주세요.",
                     maxlength: "제목은 최대 35글자까지 입력 가능합니다."
                 },
-                "email": {
+                "email-ko": {
                     required: "이메일 주소를 입력해주세요.",
                     email: "올바른 이메일 주소를 입력해주세요."
                 },
-                "message": {
+                "message-ko": {
                     required: "메세지를 입력해주세요.",
                     minlength: "메세지를 최소 5글자 이상 입력해주세요.",
                     maxlength: "메세지는 최대 500글자까지 입력 가능합니다."
@@ -65,16 +65,16 @@
                     loader.fadeIn();
 
                     const template = {	
-                        name: $('input[name=name]').val(),
-                        title: $('input[name=title]').val(),
-                        email : $('input[name=email]').val(),
-                        message : $('textarea[name=message]').val()
+                        name: $('input[name=name-ko]').val(),
+                        title: $('input[name=title-ko]').val(),
+                        email : $('input[name=email-ko]').val(),
+                        message : $('textarea[name=message-ko]').val()
                     };
             
                     emailjs.send('service_kyllox', 'template_kyllox', template).then(function(response) {
                         loader.fadeOut();
                         $('#message-warning').hide();
-                        $('#contact-form').fadeOut();
+                        $('#contact-form-ko').fadeOut();
                         $('#message-success').html("<i class='fa fa-check'></i>이메일을 성공적으로 전송했습니다. 작성해주신 이메일 주소로 답변이 전송됩니다.</p><br>" + "<p>" + response.status + "</p>" + " " + response.text);
                         $('#message-success').fadeIn();
                         $('#message-warning').hide();
@@ -88,8 +88,79 @@
         });
     };
 
+    const contactFormEn = function() {
+        $('#contact-form-en').validate({
+            rules: {
+                "name-en": {
+                    required: true,
+                    maxlength: 35
+                },
+                "title-en": {
+                    required: true,
+                    maxlength: 35
+                },
+                "email-en": {
+                    required: true,
+                    email: true
+                },
+                "message-en": {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 500
+                }
+            },
+            messages: {
+                "name-en": {
+                    required: "Please enter your name.",
+                    maxlength: "The name can be enter up to 35 characters long."
+                },
+                "title-en": {
+                    required: "Please enter a title",
+                    maxlength: "The title can be enter up to 35 characters long."
+                },
+                "email-en": {
+                    required: "Please enter a email address.",
+                    email: "Please enter a valid email address."
+                },
+                "message-en": {
+                    required: "Please enter a message.",
+                    minlength: "Please enter at least 5 letters of message.",
+                    maxlength: "The message can be enter up to 500 characters long."
+                },
+            },
+            submitHandler: function() {
+                if ($('#g-recaptcha-response').val() == null || $('#g-recaptcha-response').val() == "") {
+                    $('#error-label').html("<label id='recaptcha-error' class='error' for='#'>Please proceed with the reCAPTCHA certification.</label>");
+                } else {
+                    var loader = $('#submit-loader');
+                    loader.fadeIn();
+
+                    const template = {	
+                        name: $('input[name=name-en]').val(),
+                        title: $('input[name=title-en]').val(),
+                        email : $('input[name=email-en]').val(),
+                        message : $('textarea[name=message-en]').val()
+                    };
+            
+                    emailjs.send('service_kyllox', 'template_kyllox', template).then(function(response) {
+                        loader.fadeOut();
+                        $('#message-warning').hide();
+                        $('#contact-form-en').fadeOut();
+                        $('#message-success').html("<i class='fa fa-check'></i>You have successfully sent an email. I will send my answer to your email address.<br>" + "<p>" + response.status + "</p>" + " " + response.text);
+                        $('#message-success').fadeIn();
+                    }, function(e) {
+                        window.alert("Failed to send email. Please try again in a few minutes." + "\n" + e.status + " " + e.text);
+                        $('#message-warning').html("<i class='fa fa-xmark'></i>Failed to send email. Please try again in a few minutes.<br>" + "<p>" + e.status + "<p>" + " " + e.text);
+		                $('#message-warning').fadeIn();
+                    });
+                }
+            }
+        });
+    };
+
 	$(function() {
-        contactForm();
+        contactFormKo();
+        contactFormEn();
 
         scrollDisable('#preloader');
 
