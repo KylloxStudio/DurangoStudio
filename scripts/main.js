@@ -237,7 +237,7 @@
         });
 
         setTimeout(function() {
-            $('#intro h1').fitText(2, { minFontSize: '21px', maxFontSize: '58px' });
+            $('#intro h1').fitText(2, { minFontSize: '26px', maxFontSize: '58px' });
         }, 100);
 
         $(".ham").click(function(){
