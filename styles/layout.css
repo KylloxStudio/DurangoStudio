@@ -1141,8 +1141,8 @@ a.back-to-top::after {
     line-height: inherit;
     text-align: center;
     position: relative;
-    top: 0.525rem;
-    left: 0.875rem;
+    top: 8px;
+    left: 12px;
 }
 
 
