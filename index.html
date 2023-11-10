@@ -1,76 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kyllox's Durango Studio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="naver-site-verification" content="221b70984583842a3fb448e59b7c46fe04fa5db9" />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="author" content="Kyllox">
-    <meta name="title" content="Kyllox's Durango Studio">
-    <meta name="subject" content="Kyllox의 듀랑고 실험실">
-    <meta name="description" content="Kyllox의 듀랑고 실험실입니다. 개발 소식을 전합니다.">
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles/layout.css">
 
-    <meta property="og:site_name" content="Kyllox's Durango Studio" />
-    <meta property="og:site" content="https://durango.kyllox.studio" />
-    <meta property="og:title" content="Kyllox의 듀랑고 실험실" />
-    <meta property="og:description" content="Kyllox의 듀랑고 실험실입니다. 개발 소식을 전합니다." />
-    <meta property="og:image" content="https://durango.kyllox.studio/images/favicon.png">
-    <meta property="og:image:alt" content="Main-Image">
-    <meta property="og:url" content="https://durango.kyllox.studio" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ko_KR" />
+  <title>Durango Studio</title>
 
-    <meta name="robots" content="index, follow">
-    <meta name="naver-site-verification" content="221b70984583842a3fb448e59b7c46fe04fa5db9" />
+  <script>
+    var lang;
+    var domain;
+    if (navigator.language != null) {
+      lang = navigator.language;
+      lang = lang.toLowerCase().substring(0, 2);
+    } else {
+      lang = "undefined";
+    }
 
-    <link rel="canonical" href="https://durango.kyllox.studio">
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="styles/layout.css">
-
-    <script>
-        var lang;
-        var domain;
-
-        if (navigator.language != null) {
-            lang = navigator.language;
-            lang = lang.toLowerCase().substring(0, 2);
-        } else {
-            lang = "undefined";
-        }
-
-        if (lang == "ko") {
-            var agent = navigator.userAgent.toLowerCase();
-            if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
-                alert("이 웹사이트는 인터넷 익스플로러(IE)를 지원하지 않습니다.");
-                window.close();
-            }
-            location.replace("ko/");
-        } else if (lang == "en") {
-            if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
-                alert("This website does not support Internet Explorer.");
-                window.close();
-            }
-            location.replace("en/");
-        } else {
-            if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
-                alert("This website does not support Internet Explorer.");
-                window.close();
-            }
-            location.replace("en/");
-        }
-    </script>
+    if (lang == "ko") {
+      var agent = navigator.userAgent.toLowerCase();
+      if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
+        alert("이 웹사이트는 인터넷 익스플로러(IE)를 지원하지 않습니다.");
+        window.close();
+      }
+      location.replace("ko/");
+    } else if (lang == "en") {
+      if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
+        alert("This website does not support Internet Explorer.");
+        window.close();
+      }
+      location.replace("en/");
+    } else {
+      if (agent.indexOf('trident') != -1 || agent.indexOf("msie") != -1) {
+        alert("This website does not support Internet Explorer.");
+        window.close();
+      }
+      location.replace("en/");
+    }
+  </script>
 </head>
 
 <body>
-    <noscript>
-        <div class="no-js">
-            <div class="no-js-text">
-                <h1>JavaScript permission is required.</h1>
-                <p>You can enable JavaScript in <a rel="noopener noreferrer" target="_black" href="https://enable-javascript.com">browser settings</a>.</p>
-            </div>
-        </div>
-    </noscript>
+  <noscript>
+    <meta http-equiv='refresh' content='0;url=./en/'>
+  </noscript>
 </body>
 </html>

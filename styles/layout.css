@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url("framework.css");
+@import url('/styles/fontawesome/css/all.css');
 
 /* Copyright [Google Fonts - Google] [https://fonts.google.com] */
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
@@ -9,7 +10,7 @@
 /* Copyright [NanumSquare - Naver] [https://hangeul.naver.com/font] */
 @font-face {
     font-family: 'NanumSquare';
-    src: url('../fonts/NanumSquareR.ttf');
+    src: url('/fonts/NanumSquareR.ttf');
 }
 
 /* Copyright [Infinity Sans - Wemade] [https://wemade.com/Company/Ci] */
@@ -30,43 +31,43 @@
 /* Copyright [Raleway Font - Google] [https://fonts.google.com/specimen/Raleway] */
 @font-face {
     font-family: 'Raleway';
-    src: url('../fonts/Raleway-Regular.ttf');
+    src: url('/fonts/Raleway-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Raleway Medium';
-    src: url('../fonts/Raleway-Medium.ttf');
+    src: url('/fonts/Raleway-Medium.ttf');
 }
 
 @font-face {
     font-family: 'Raleway Bold';
-    src: url('../fonts/Raleway-Bold.ttf');
+    src: url('/fonts/Raleway-Bold.ttf');
 }
 
 /* Copyright [Pappins Font - The Poppins Project Authors] [https://github.com/itfoundry/Poppins] */
 @font-face {
     font-family: 'Poppins';
-    src: url('../fonts/Poppins-Regular.ttf');
+    src: url('/fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Poppins Medium';
-    src: url('../fonts/Poppins-Medium.ttf');
+    src: url('/fonts/Poppins-Medium.ttf');
 }
 
 @font-face {
     font-family: 'Poppins SemiBold';
-    src: url('../fonts/Poppins-SemiBold.ttf');
+    src: url('/fonts/Poppins-SemiBold.ttf');
 }
 
 @font-face {
     font-family: 'Poppins Bold';
-    src: url('../fonts/Poppins-Bold.ttf');
+    src: url('/fonts/Poppins-Bold.ttf');
 }
 
 @font-face {
     font-family: 'Poppins Bold Italic';
-    src: url('../fonts/Poppins-BoldItalic.ttf');
+    src: url('/fonts/Poppins-BoldItalic.ttf');
 }
 
 html, body {
@@ -515,10 +516,8 @@ a.button:hover {
     background: rgba(0, 0, 0, 0.125) !important;
 }
 
-.intro-content .button::after {
+.intro-content .button i {
     display: inline-block;
-    content: "\f107";
-    font-family: "FontAwesome";
     font-size: 1rem;
     line-height: inherit;
     text-align: center;
@@ -920,7 +919,7 @@ nav ol {
 #breadcrumb li a::after,
 .sidebar nav a::after {
     position: absolute;
-    font-family: "Font Awesome\ 5 Free";
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 10px;
     line-height: 10px;
@@ -1145,16 +1144,14 @@ a:hover.back-to-top {
 	background-color: #4099ff;
 }
 
-a.back-to-top::after {
+a.back-to-top i {
     display: inline-block;
-    content: "\f106";
-    font-family: "FontAwesome";
     font-size: 1.25rem;
     line-height: inherit;
     text-align: center;
     position: relative;
-    top: 8px;
-    left: 12px;
+    top: 6pt;
+    left: 10pt;
 }
 
 

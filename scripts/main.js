@@ -227,7 +227,7 @@
         window.addEventListener('load', slidemenulinksActive);
         onscroll(document, slidemenulinksActive);
 
-        $('body').prepend('<a href="#top" class="back-to-top page-scroll"></a>');
+        $('body').prepend('<a href="#top" class="back-to-top page-scroll"><i class="fas fa-angle-up"></i></a>');
         $(window).scroll(function() {
             if ($(window).scrollTop() > 500) {
                 $('a.back-to-top').fadeIn();
